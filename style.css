@@ -13,10 +13,19 @@
     margin: 0;
 }
 
-.titleBox {
-    height: 200 px;
-    font-size: 400;
+body {
+    display:flex;
+    flex-direction: column;
+    
 }
+
+#bandTitle {
+    height:min-content;
+    font-size: 200%;
+    
+}
+
+
 
 
 #bandCard img {
