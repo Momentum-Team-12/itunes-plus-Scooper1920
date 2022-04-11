@@ -7,25 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>Music Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css"> -->
   </head>
   <body>
     <div id="form-container">
       <form class="form">
         <input
-          id="search"
+          id="search-input"
           type="text"
           class="input"
           placeholder="Band or Artist Name"
         />
-        <button id="clear" class="clear-results">clear</button>
+        <button id="submit" class="search-results">submit</button>
+   
+        
       </form>
     </div>
+    <h2>Talking Heads Discography</h2>
+    <hr>
 
     <div class="results-container">
       <ul class="reults-list" id="list">
       </ul>
     </div>
-    <div id="root"></div>
+    <div id="root">
+   
+    </div>
 
   </body>
 </html>

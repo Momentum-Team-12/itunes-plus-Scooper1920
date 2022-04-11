@@ -1,34 +1,49 @@
 console.log("Holllaaa!")
 
 let root = document.querySelector("#root")
+let submit = document.querySelector("#submit")
 
-fetch("https://itunes.apple.com/search?term=barenaked+ladies&media=music", {
+
+let input = document.getElementById("search-input")
+
+
+
+
+
+fetch("https://itunes.apple.com/search?term=talking+heads&media=music", {
   method: "GET",
 })
 
-.then (function(response) {
+.then(function(response) {
     return response.json()
 })
 
 .then(function(data){
-    for (let i of data.results) { 
-        let infodiv = document.createElement("div")
-        infodiv.classList.add("info")
-        root.appendChild(infodiv)
-        infodiv.innerText = i.trackName
+    for (let i of data.results.slice(2)) { 
+
+        let bandCard = document.createElement("div")
+        root.appendChild(bandCard)
+        bandCard.id = "bandCard"
+        
+        let info = document.createElement("p")
+        info.classList.add("info")
+        bandCard.appendChild(info)
+        info.innerText = i.trackName
+
+
 
 let picDiv = document.createElement("img")
-root.appendChild(picDiv)
+bandCard.appendChild(picDiv)
 picDiv.src = i.artworkUrl100
 picDiv.classList.add("pic")
 
 
 let playerDiv = document.createElement("div")
-root.appendChild(playerDiv)
+bandCard.appendChild(playerDiv)
 playerDiv.classList.add("player")
 playerDiv.innerHTML =`
         <figure>
-    <figcaption>Listen to this track:</figcaption>
+    <figcaption>Listen to ${i.trackName}:</figcaption>
     <audio
         controls
         src="${i.previewUrl}">
@@ -48,10 +63,34 @@ playerDiv.innerHTML =`
 
 })
 
+// let input = document.getElementById("search-input")
+// submit.addEventListener("click",() => {
+//     fetch(`https://itunes.apple.com/search?term=${input.value}&media=music`, {
+//   method: "GET",
+  
+// })
+// console.log("clicked")
+
+// })
+
+// submit.addEventListener("click",() => {
+//     fetch(`https://itunes.apple.com/search?term=${input.value}&media=music`, {
+//   method: "GET",
+
+  
+  
+// })
+
+// .then(function(response) {
+//     return response.json()
+// })
+
+// .then(function(data){
+// console.log("clicked")
+
+// })
 
 
-// .addEventListener('keypress', function (e) {
-//     if (e.key === 'Enter') {
-//       // code for enter
-//     }
-// });
+
+
+

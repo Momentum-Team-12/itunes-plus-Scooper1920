@@ -1,4 +1,4 @@
-body {
+/* body {
     display:flex;
     flex-wrap:wrap;
    
@@ -6,16 +6,47 @@ body {
 
     background-color: aqua;
     
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
+
+
+#bandCard img {
+    width: 150px;
+}
+
+ #bandCard {
+   
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+   padding: 20px;
+} 
+
+#bandCard > p {
+
+    text-align: center;
+}
+
 
 #root {
     display: flex;
-    padding: 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-
+    flex-wrap: wrap;
+    
+    
 }
+
+/* figure {
+    width: 100px;
+} */
+
+
+
 
 
 
