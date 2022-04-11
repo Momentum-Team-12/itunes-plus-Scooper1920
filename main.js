@@ -79,7 +79,7 @@ playerDiv.innerHTML =`
 // })
 
 // .then(function(data){
-//     for (let i of data.results.slice(2)) { 
+//     for (let i of data.results) { 
 
 //         let bandCard = document.createElement("div")
 //         root.appendChild(bandCard)
