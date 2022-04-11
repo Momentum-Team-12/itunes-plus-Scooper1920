@@ -1,0 +1,55 @@
+/* body {
+    display:flex;
+    flex-wrap:wrap;
+   
+  
+
+    background-color: aqua;
+    
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+#bandCard img {
+    width: 150px;
+}
+
+ #bandCard {
+   
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+   padding: 20px;
+} 
+
+#bandCard > p {
+
+    text-align: center;
+}
+
+
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+/* figure {
+    width: 100px;
+} */
+
+
+
+
+
+
+
+
+
