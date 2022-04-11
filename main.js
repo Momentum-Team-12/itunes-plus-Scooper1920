@@ -2,24 +2,46 @@ console.log("Holllaaa!")
 
 let root = document.querySelector("#root")
 let submit = document.querySelector("#submit")
-
-
 let input = document.getElementById("search-input")
+let form = document.querySelector("#sign")
+let bandTitle = document.querySelector("#bandTitle")
 
 
 
+function listenerStuff() {
+form.addEventListener("submit", function(event) {
+event.preventDefault()
+console.log(`This is a form submit event: ${event}`)
+// let messageDiv =document.createElement("div")
+let band = document.querySelector("#user-input")
+console.log(`You found ${band.value}! You have beauty and grace!`)
+let titleBox = document.createElement("div")
+titleBox.classList.add("title")
+bandTitle.appendChild(titleBox)
+console.log(titleBox)
+titleBox.innerText=`${band.value}'s Discography`
+// important to return at the end of function to store value and
+// use it later
+GetReq (band.value)
 
 
-fetch("https://itunes.apple.com/search?term=talking+heads&media=music", {
+})
+}
+
+
+function GetReq(input){
+
+fetch(`https://itunes.apple.com/search?term=${input}&media=music`, {
   method: "GET",
 })
+
 
 .then(function(response) {
     return response.json()
 })
 
 .then(function(data){
-    for (let i of data.results.slice(2)) { 
+    for (let i of data.results) { 
 
         let bandCard = document.createElement("div")
         root.appendChild(bandCard)
@@ -62,6 +84,12 @@ playerDiv.innerHTML =`
 
 
 })
+}
+
+let selection = listenerStuff()
+
+
+
 
 
 // searchInput.addEventListener("click", (e) => {

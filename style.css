@@ -13,6 +13,11 @@
     margin: 0;
 }
 
+.titleBox {
+    height: 200 px;
+    font-size: 400;
+}
+
 
 #bandCard img {
     width: 150px;

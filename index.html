@@ -11,20 +11,19 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css"> -->
   </head>
   <body>
-    <div id="form-container">
-      <form class="form">
-        <input
-          id="search-input"
-          type="text"
-          class="input"
-          placeholder="Band or Artist Name"
-        />
-        <button id="submit" class="search-results">submit</button>
-   
-        
-      </form>
-    </div>
-    <h2>Talking Heads Discography</h2>
+<form action="/" id="sign">
+<input type="text"
+name="userInput"
+id="user-input"
+placeholder="Band or Artist Name"
+required
+>
+<label for="userInput"></label>
+<button type ="submit">submit</button>
+<button type="clear">clear</button>
+</form>
+
+    <div id="bandTitle"></div>
     <hr>
 
     <div class="results-container">
