@@ -3,7 +3,6 @@ console.log("Holllaaa!")
 let root = document.querySelector("#root")
 let submit = document.querySelector("#submit")
 let input = document.getElementById("search-input")
-let song = document.getElementById('search-input')
 
 
 
@@ -64,7 +63,7 @@ let song = document.getElementById('search-input')
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    let value = song.value
+    let value = input.value
 
     // if (value && value.trim().length > 0){
     //      value = value.trim().toLowerCase()
